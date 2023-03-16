@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number"id="number">
+<button onclick="addtoarray()">ADD</button>
+<button onclick="display()"> Display</button>
+<div id="result"></div>
+<script>
+    let a = 0;
+    let array = Array()
+    function addtoarray() {
+    array[a] = document.getElementById('number').value
+        alert('phan tu ' + array[a] + ' vua duoc them vao mang vi tri la ' + a);
+    a++;
+    document.getElementById('number').value = " "
+
+    }
+    function display() {
+        let e = '<hr>'
+        for (let i = 0; i < array.length ; i++) {
+        e += 'gia tri thu ' + i + ' la ' + array[i] + '<br>'
+        }
+    document.getElementById('result').innerHTML=e
+    }
+</script>
+</body>
+</html>
